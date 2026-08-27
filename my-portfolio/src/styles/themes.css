@@ -1,0 +1,40 @@
+:root {
+  /* Default Theme: Pastel Garden */
+
+  --background: #f7f3ee;
+  --background-secondary: #eee9e2;
+  --surface: #fffdfc;
+
+  --text-primary: #2e3430;
+  --text-secondary: #68706a;
+
+  --accent-green: #b8d8c2;
+  --accent-purple: #d9c7e8;
+  --accent-peach: #f3c9b8;
+  --accent-yellow: #f4e5a6;
+
+  --border: rgba(46, 52, 48, 0.12);
+
+  --shadow: 0 10px 30px rgba(46, 52, 48, 0.08);
+}
+
+
+/* 🌙 Twilight Garden Theme */
+
+[data-theme="twilight"] {
+  --background: #1f2430;
+  --background-secondary: #292f3d;
+  --surface: #343b4a;
+
+  --text-primary: #f3eee8;
+  --text-secondary: #b8b6c0;
+
+  --accent-green: #a8c7b5;
+  --accent-purple: #c7b6d9;
+  --accent-peach: #d6aaa1;
+  --accent-yellow: #d8cb91;
+
+  --border: rgba(243, 238, 232, 0.12);
+
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
