@@ -1,6 +1,4 @@
-:root {
-  /* Default Theme: Pastel Garden */
-
+[data-theme="pastel"] {
   --background: #f7f3ee;
   --background-secondary: #eee9e2;
   --surface: #fffdfc;
@@ -18,8 +16,6 @@
   --shadow: 0 10px 30px rgba(46, 52, 48, 0.08);
 }
 
-
-/* 🌙 Twilight Garden Theme */
 
 [data-theme="twilight"] {
   --background: #1f2430;

@@ -1,23 +1,45 @@
+import { useState } from "react";
+import ThemeToggle from "./components/ThemeToggle";
+
 function App() {
+  const [theme, setTheme] = useState("pastel");
+
+  const toggleTheme = () => {
+    setTheme((currentTheme) =>
+      currentTheme === "pastel" ? "twilight" : "pastel"
+    );
+  };
+
   return (
-    <main>
-      <section className="test-section">
-        <p>🌿 Welcome to my digital garden</p>
+    <div className="app" data-theme={theme}>
+      <div className="theme-toggle-container">
+        <ThemeToggle
+          theme={theme}
+          toggleTheme={toggleTheme}
+        />
+      </div>
 
-        <h1>Hi, I'm Freysell.</h1>
+      <main>
+        <section className="test-section">
+          <p className="eyebrow">
+            🌿 Welcome to my digital garden
+          </p>
 
-        <p>
-          Building digital experiences where creativity and technology meet.
-        </p>
+          <h1>Hi, I'm Freysell.</h1>
 
-        <div className="color-test">
-          <div className="color-card green">Green</div>
-          <div className="color-card purple">Purple</div>
-          <div className="color-card peach">Peach</div>
-          <div className="color-card yellow">Yellow</div>
-        </div>
-      </section>
-    </main>
+          <p>
+            Building digital experiences where creativity and technology meet.
+          </p>
+
+          <div className="color-test">
+            <div className="color-card green">Green</div>
+            <div className="color-card purple">Purple</div>
+            <div className="color-card peach">Peach</div>
+            <div className="color-card yellow">Yellow</div>
+          </div>
+        </section>
+      </main>
+    </div>
   );
 }
 
