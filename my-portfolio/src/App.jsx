@@ -1,6 +1,9 @@
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./sections/Hero";
+import About from "./components/About";
+import Skills from "./sections/Skills";
+import Projects from "./sections/Projects";
 
 function App() {
   const [theme, setTheme] = useState("pastel");
@@ -17,6 +20,9 @@ function App() {
 
       <main>
         <Hero />
+        <About />
+        <Skills />
+        <Projects />
       </main>
     </div>
   );

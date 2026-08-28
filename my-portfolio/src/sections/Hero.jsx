@@ -2,20 +2,20 @@ function Hero() {
   return (
     <section id="home" className="hero">
       <div className="hero-content">
-        <p className="hero-greeting">
+        <p className="hero-greeting hero-reveal greeting-reveal">
           Hello, hola, bonjour, <span>👋🏻</span>
         </p>
 
-        <h1>
+        <h1 className="hero-reveal title-reveal">
           I'm <span className="hero-name">Freysell.</span>
         </h1>
 
-        <p className="hero-intro">
+        <p className="hero-intro hero-reveal intro-reveal">
           I'm a Computer Science and Engineering student exploring the space
           where creativity, technology, and curiosity meet.
         </p>
 
-        <div className="hero-buttons">
+        <div className="hero-buttons hero-reveal buttons-reveal">
           <a href="#projects" className="primary-button">
             Explore my work
             <span>→</span>
@@ -27,7 +27,7 @@ function Hero() {
         </div>
       </div>
 
-      <div className="hero-visual">
+      <div className="hero-visual visual-reveal">
         <div className="orb orb-one"></div>
         <div className="orb orb-two"></div>
         <div className="orb orb-three"></div>
