@@ -5,6 +5,8 @@ import About from "./components/About";
 import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import Research from "./sections/Research";
+import Contact from "./sections/Contact";
+import Footer from "./sections/Footer";
 
 function App() {
   const [theme, setTheme] = useState("pastel");
@@ -25,7 +27,10 @@ function App() {
         <Skills />
         <Projects />
         <Research />
+        <Contact />
       </main>
+
+      <Footer />
     </div>
   );
 }
