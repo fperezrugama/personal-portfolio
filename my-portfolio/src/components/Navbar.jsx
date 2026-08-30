@@ -11,6 +11,7 @@ function Navbar({ theme, toggleTheme }) {
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#research">Research</a>
         <a href="#contact">Contact</a>
       </nav>
 
