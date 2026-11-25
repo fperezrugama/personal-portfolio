@@ -232,14 +232,9 @@ function Projects() {
       </article>
 
       <div className="projects-future project-reveal project-reveal--future">
-        <div>
-          <p className="project-kicker">More work</p>
-          <h3>More ideas will find their way here.</h3>
-        </div>
-        <p>
-          The collection is intentionally growing, one thoughtful project at a
-          time.
-        </p>
+        <ProjectLink href="#global-career-accelerator">
+          Explore Global Career Accelerator projects
+        </ProjectLink>
       </div>
     </section>
   );

@@ -1370,7 +1370,8 @@ a {
     background-color 0.25s ease;
 }
 
-.project-button:first-child {
+.projects .project-button:first-child,
+.project-button--primary {
   border-color: var(--accent-purple);
   background: var(--accent-purple);
   color: var(--surface);
@@ -1387,7 +1388,8 @@ a {
   transform: translateY(-2px);
 }
 
-.project-button:first-child:not(.project-button--disabled):hover {
+.projects .project-button:first-child:not(.project-button--disabled):hover,
+.project-button--primary:hover {
   background: color-mix(in srgb, var(--accent-purple) 84%, var(--text-primary));
   color: var(--surface);
 }
@@ -1405,27 +1407,9 @@ a {
 
 .projects-future {
   display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 2rem;
   margin-top: 6rem;
   padding: 1.75rem 0;
   border-top: 1px solid var(--border);
-}
-
-.projects-future h3 {
-  margin-top: 0.65rem;
-  color: var(--text-primary);
-  font-size: clamp(1.45rem, 3vw, 2.2rem);
-  line-height: 1.1;
-}
-
-.projects-future > p {
-  max-width: 300px;
-  color: var(--text-secondary);
-  font-size: 0.9rem;
-  line-height: 1.6;
-  text-align: right;
 }
 
 @media (max-width: 900px) {
@@ -1477,14 +1461,7 @@ a {
   }
 
   .projects-future {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 1rem;
     margin-top: 4rem;
-  }
-
-  .projects-future > p {
-    text-align: left;
   }
 
   .project-actions {
@@ -1512,8 +1489,124 @@ a {
 
 
 /* =========================
-
+   GLOBAL CAREER ACCELERATOR
 ========================= */
+
+.program-projects {
+  width: min(1200px, calc(100% - 3rem));
+  margin: 0 auto;
+  padding: 7rem 0 9rem;
+}
+
+.program-project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.program-project-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border: 1px solid var(--border);
+  border-radius: 1.75rem;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.program-project-card:only-child {
+  grid-column: 1 / -1;
+  width: min(100%, 720px);
+}
+
+.program-project-preview {
+  padding: 0.65rem;
+  border-bottom: 1px solid var(--border);
+  border-radius: 1.75rem 1.75rem 0 0;
+  background: var(--background-secondary);
+}
+
+.program-project-preview-link,
+.program-project-screenshot {
+  display: block;
+  border-radius: 1.15rem;
+}
+
+.program-project-screenshot {
+  width: 100%;
+  height: auto;
+}
+
+.program-project-preview-link {
+  transition: box-shadow 0.25s ease;
+}
+
+.program-project-preview-link:focus-visible {
+  outline: 2px solid var(--accent-purple);
+  outline-offset: 2px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .program-project-preview-link:hover {
+    box-shadow: 0 0 0 2px var(--accent-purple), var(--shadow);
+  }
+}
+
+.program-project-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.program-project-content h3 {
+  margin-top: 0.7rem;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+}
+
+.program-project-organization {
+  margin-top: 0.75rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.program-project-features {
+  display: grid;
+  gap: 0.4rem;
+  margin-top: 0.85rem;
+  padding-left: 1.15rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.program-project-technologies {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.program-project-technologies span {
+  display: block;
+}
+
+.program-project-content .project-actions {
+  margin-top: auto;
+}
+
+@media (max-width: 900px) {
+  .program-project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .program-projects {
+    width: min(100% - 2rem, 620px);
+    padding: 5.5rem 0 7rem;
+  }
+}
 
 /* =========================
    ABOUT
